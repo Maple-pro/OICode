@@ -3,8 +3,8 @@
  * @create: 2020/08/05
  * @contest: CF #661
  * @problem: B
- * @description: 
- * @difficulty: 
+ * @description: 贪心
+ * @difficulty: *
  */
 
 #include <bits/stdc++.h>
