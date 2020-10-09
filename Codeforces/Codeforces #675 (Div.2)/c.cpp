@@ -1,5 +1,4 @@
-// wrong answer
-
+// 公式推导 
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,20 +9,20 @@ int main()
 {
 	string s;
 	cin >> s;
-	int len = s.length();
+	ll len = s.length();
 	ll res = 0;
-	int dig0 = s[len - 1] - '0';
-	res += dig0 * (len - 1) * len / 2;
-	// cout << res << endl;
+	ll sum = 0;
+	ll p = 1;
 	
-	for (int i = 1; i < len; i++)
+	for (ll i = len - 1; i >= 0; i--)
 	{
-		int dig = s[len - i -1] - '0';
-		res += dig * pow(10, i) * (len - 1) * (len - 1 - i) / 2 + dig * ((9 * i - 1) * pow(10, i) + 1) / 81;
-		// cout << res << endl;
-		res = res % mod;
+		int dig = s[i] - '0';
+		ll k = (i * (i + 1) / 2 % mod * p % mod + sum) % mod;
+		sum = (p * (len - i) % mod + sum) % mod;
+		p = p * 10 % mod;
+		res = (res + dig * k % mod) % mod;
 	}
-	// res += s[len - 1] - '0';
+	
 	cout << res << endl;
 	return 0;
 }
