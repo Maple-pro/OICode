@@ -2,13 +2,13 @@
 using namespace std;
 
 const int maxn = 100 + 5;
-int data[maxn];
+int datas[maxn];
 
 int main()
 {
 	int t;
 	cin >> t;
-	data[0] = 0;
+	datas[0] = 0;
 	while(t--)
 	{
 		int n;
@@ -17,9 +17,9 @@ int main()
 		cin >> n;
 		for(int i=1; i<=n; i++)
 		{
-			cin >> data[i];
-			sum += data[i];
-			if (data[i] == 0)
+			cin >> datas[i];
+			sum += datas[i];
+			if (datas[i] == 0)
 			{
 				zero_num ++;
 			}
