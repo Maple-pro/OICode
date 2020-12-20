@@ -1,1 +1,6 @@
-*.exe
+*
+!.gitignore
+!*.md
+!*.cpp
+!*.json
+!*/
