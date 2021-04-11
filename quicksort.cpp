@@ -34,5 +34,6 @@ int main()
 	
 	for (int i = 0; i < 13; i++) printf("%d\n", a[i]);
 	
+	system("pause");
 	return 0;
 }
