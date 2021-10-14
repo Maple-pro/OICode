@@ -5,7 +5,7 @@ int a[13] = {7, 2, 6, 5, 4, 11, 8, 5, 3, 5, 1, 9, 5};
 
 int partition(int start, int end)
 {
-	int base = a[start];
+	auto base = a[start];
 	int left = start;
 	int right = end;
 	while (left < right)
